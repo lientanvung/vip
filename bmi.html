@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" onsubmit="return false">
+        <h1>BMI Calculator</h1>
+        <p>Height (in cm)</p>
+        <input type="text" id="height">
+        <p>weight (in kg)</p>
+        <input type="text" id="weight">
+        <button id="btn" onclick="myFunction()">calculate</button>
+        <p>ket qua</p>
+        <input type="text" id="function">
+        <p>phan loai</p>
+        <div id="haha"></div>
+    </div>
+    <script>
+        function myFunction(){
+            var n1 = document.getElementById('height').value;
+            var n2 = document.getElementById('weight').value;
+            n1 = n1 /100;
+            var newfunction = n2 / (n1 * n1);
+            newfunction = Math.round(newfunction);
+
+            document.getElementById('function').value = newfunction;
+
+            if(newfunction < 18.5){
+                document.getElementById('haha').innerHTML = 'gay';
+                return;
+            }
+            else if(18.5 <= newfunction && newfunction <=24.9){
+                document.getElementById('haha').innerHTML = 'trung binh';
+                return;
+            }
+                else if(25 <= newfunction && newfunction <= 29.9){
+                document.getElementById('haha').innerHTML = 'hoi beo';
+                return;
+            }
+            else if(30 <= newfunction && newfunction <= 34.9){
+                document.getElementById('haha').innerHTML = 'beo phi cap do 1';
+                return newfunction;
+            }
+            else if(35 <= newfunction && newfunction <= 39.9){
+                document.getElementById('haha').innerHTML = 'beo phi cap do 2';
+                return;
+            }
+            else if( newfunction >= 40){
+                document.getElementById('haha').innerHTML = 'beo phi cap do 3';
+                return;
+            }
+            
+        }
+    </script>
+</body>
+</html>
