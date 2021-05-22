@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+   nhập số snt <input type="text" id="snt">
+   <button type="btn" onclick="myFunction()">tính</button>
+    <p id="haha"></p>
+    <script>
+        function myFunction(){
+           var n = document.getElementById('snt').value;
+            if(n < 2){
+              document.getElementById('haha').innerHTML = n + '  '+ 'không phải số nguyên tố';
+              return;
+            }else{
+                for(var i = 2 ;i <n-1; i++ ){
+                    if(n % i == 0){
+                        document.getElementById('haha').innerHTML = n+ '  ' + 'không phải số nguyên tố';
+                        return;
+                    }else{
+                        document.getElementById('haha').innerHTML = n + '  ' + 'là số nguyên tố';
+                        return;
+                    }
+                }
+            }
+        }
+
+    // kiemTraSnt = prompt('vui lòng nhập số');
+
+    </script>
+</body>
+</html>
