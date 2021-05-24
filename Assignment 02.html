@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+    <p>số tiền vay</p> <input type="text" id="stv"> VNĐ <br>
+   <p> thời gian vậy</p> <input type="text" id="tgv"> tháng <br>
+   <p> lãi suất</p> <input type="text" id="laisuat"> % năm <br>
+   <p> ngày giải ngân</p> <input type="data" id="ngn">
+   <button onclick="myfunction()">tính</button>
+   </div>
+   <script>
+       function myfunction(){
+            var tienvay = document.getElementById('stv').value;
+            var thoigian = document.getElementById('tgv').value;
+            var laisuat = document.getElementById('laisuat').value;
+           var tiengoc = tienvay / thoigian;
+           laisuat =(laisuat / 100)/thoigian;
+             goc = tienvay;
+             tiengoc = tienvay/thoigian;
+
+           for( i = 0; i < thoigian; i++){
+                 lai = goc * laisuat;
+                 goc = goc - tiengoc;
+                 tong = tiengoc + lai;
+                //  lai = Math.round(lai);
+                document.write('kì trả nợ :' +'  ' +i + '  '+'số gốc còn lại :'+Math.round(goc)+'  ' + 'gốc :' +'  '+ Math.round(tiengoc) +'  '+ 'lãi :' +'  '+ Math.round(lai)+'  '  
+               + 'tổng gốc + lãi :' +'  '+ Math.round(tong)+  '<br/>');
+           }
+       }
+   </script>
+</body>
+</html>
